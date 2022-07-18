@@ -1,37 +1,41 @@
-## Welcome to GitHub Pages
+﻿# ShareOnLan
 
-You can use the [editor on GitHub](https://github.com/simoneriggi92/Simone_portfolio/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+ShareOnLan è una Windows Dekstop Application che consente di inviare file o cartelle
+tra due o più computer sfruttando la rete LAN come mezzo di trasmissione.
+È stata implementata come soluzione per il progetto del corso di Programmazione di Sistema dell'a.a 2016/2017 tenuto dai prof. Giampiero Cabodi e Giovanni Malnati al Politecnico di Torino,
+per il Corso di Laurea Magistrale in INGEGNERIA INFORMATICA (COMPUTER ENGINEERING).
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+# Specifiche del sistema richieste
 
-### Markdown
+  - Il servizio di sharing, messo in esecuzione in background, consente di annunciare la
+disponibilità del proprio host a tutti gli altri host presenti nella rete locale. Per scoprire la
+presenza di tali host, potrà essere utilizzato un meccanismo basato sull’uso di pacchetti UDP
+multicast o tecnologie simili.
+  - Un host può essere configurato in modalità privata: in tal caso non rivelerà agli altri host la sua presenza e non potrà ricevere alcun file. Potrà però inviarli. Un host configurato in modalità pubblica, invece, annuncia la propria presenza, e consente di accettare file provenienti da altri computer della rete, comportandosi da server. Se l’utente di un host seleziona il menu contestuale (tasto destro) su un file o su una cartella,
+vede apparire una voce che gli consente di condividere il file o la cartella a tutti gli host che si sono annunciati o solo a un loro sottoinsieme. In questo caso l’host si comporta da client.
+La connessione tra i diversi host coinvolti nel trasferimento sarà basata su un protocollo di
+rete a piacere.
+- Bisognerà gestire i conflitti in caso di ricezione di più file con stesso nome da salvare sullo
+stesso percorso.
+- L’host che invia un file visualizza una barra di avanzamento, una stima del tempo di
+completamento, e dà all’utente la possibilità di annullare l’operazione.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Tecnologie utilizzate
 
-```markdown
-Syntax highlighted code block
+* .NET Framework version 4.7.2
+* C#
+* Windows Form
+* [MaterialSkin](https://github.com/IgnaceMaes/MaterialSkin) - Theming .NET WinFormsto Google's Material Design Principles.
 
-# Header 1
-## Header 2
-### Header 3
+### Implementazione
 
-- Bulleted
-- List
+Per l'implementazione delle specifiche richieste sono stati utilizzati:
 
-1. Numbered
-2. List
+* UDP Multicast - per annunciare gli host online
+* TCP  - per l'invio di file e cartelle tra gli host
+* Multithreading (BackgroundWorkers, Threads)
+* Windows Form - per la realizzazione dell'UI. È stato utilizzato il pacchetto Nuget MaterialSkin per l'utilizzo del Material Design
 
-**Bold** and _Italic_ and `Code` text
+## Autore
 
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/simoneriggi92/Simone_portfolio/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+* **Simone Riggi** - simone.riggi92@gmail.com
