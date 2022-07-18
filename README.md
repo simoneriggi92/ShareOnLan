@@ -36,7 +36,6 @@ Per l'implementazione delle specifiche richieste sono stati utilizzati:
 * Multithreading (BackgroundWorkers, Threads)
 * Windows Form - per la realizzazione dell'UI. È stato utilizzato il pacchetto Nuget MaterialSkin per l'utilizzo del Material Design
 
-## Autori
+## Autore
 
-* **Gianluca Giavatto** - gianluca.giavatto@gmail.com
 * **Simone Riggi** - simone.riggi92@gmail.com
