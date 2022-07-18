@@ -2,8 +2,6 @@
 
 ShareOnLan è una Windows Dekstop Application che consente di inviare file o cartelle
 tra due o più computer sfruttando la rete LAN come mezzo di trasmissione.
-È stata implementata come soluzione per il progetto del corso di Programmazione di Sistema dell'a.a 2016/2017 tenuto dai prof. Giampiero Cabodi e Giovanni Malnati al Politecnico di Torino,
-per il Corso di Laurea Magistrale in INGEGNERIA INFORMATICA (COMPUTER ENGINEERING).
 
 # Specifiche del sistema richieste
 
